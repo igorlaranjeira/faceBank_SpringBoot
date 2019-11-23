@@ -13,7 +13,7 @@ public abstract class abstractEntity <ID extends Serializable> implements Serial
 	private ID id;
 
 	public ID getId() {
-		return id;
+		return id; 
 	}
 
 	public void setId(ID id) {
