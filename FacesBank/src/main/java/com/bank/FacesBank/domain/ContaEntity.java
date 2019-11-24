@@ -22,11 +22,11 @@ public class ContaEntity extends AbstractEntity<Long>{
 	private String numeroDeConta;
 	
 	@OneToOne
-	@JoinColumn(name = "id_cliente")
+	@JoinColumn(name = "id_cliente_fk")
 	private ClienteEntity clienteConta;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_agencia")
+	@JoinColumn(name = "id_agencia_fk")
 	private AgenciaEntity agenciaConta;
 	
 	
