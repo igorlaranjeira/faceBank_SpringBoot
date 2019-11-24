@@ -2,6 +2,8 @@ package com.bank.FacesBank.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @SuppressWarnings("serial")
@@ -16,9 +18,9 @@ public class AgenciaEntity extends AbstractEntity<Long>{
 	@Column(name = "nu_agencia")
 	private int numeroAgencia;
 	
-//	@OneToOne
-//	@JoinColumn(name = "id_endereco")
-//	private enderecoAgenciaEntity enderecoAgencia;
+	@OneToOne
+	@JoinColumn(name = "id_endereco_fk")
+	private EnderecoEntity enderecoAgencia;
 
 	public String getNomeAgencia() {
 		return nomeAgencia;
@@ -36,12 +38,15 @@ public class AgenciaEntity extends AbstractEntity<Long>{
 		this.numeroAgencia = numeroAgencia;
 	}
 
-//	public enderecoAgenciaEntity getEnderecoAgencia() {
-//		return enderecoAgencia;
-//	}
-//
-//	public void setEnderecoAgencia(enderecoAgenciaEntity enderecoAgencia) {
-//		this.enderecoAgencia = enderecoAgencia;
-//	}
+	public EnderecoEntity getEnderecoAgencia() {
+		return enderecoAgencia;
+	}
+
+	public void setEnderecoAgencia(EnderecoEntity enderecoAgencia) {
+		this.enderecoAgencia = enderecoAgencia;
+	}
+	
+
+
 }
 	
