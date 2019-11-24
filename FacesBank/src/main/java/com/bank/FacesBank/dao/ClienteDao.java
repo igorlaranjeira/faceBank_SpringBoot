@@ -2,15 +2,17 @@ package com.bank.FacesBank.dao;
 
 import java.util.List;
 
+import com.bank.FacesBank.domain.ClienteEntity;
+
 public interface ClienteDao {
 
-void save(ClienteDao cliente);
+void save(ClienteEntity cliente);
 	
-	void update(ClienteDao cliente);
+	void update(ClienteEntity cliente);
 	
 	void delete(Long id);
 	
-	ClienteDao findById(long id);
+	ClienteEntity findById(long id);
 	
-	List<ClienteDao> findAll();
+	List<ClienteEntity> findAll();
 }
