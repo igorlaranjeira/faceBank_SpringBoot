@@ -15,15 +15,16 @@ public class DepartamentoEntity extends AbstractEntity<Long>{
 	private String nome;
 
 	@OneToMany(mappedBy = "departamentoEntity")
-	private List<CargoEntity> cargos;
+	@JoinColumn(name = "id_cargo_fk")
+	private List<CargoEntity> cargo;
 	
 	
 	public List<CargoEntity> getCargos() {
-		return cargos;
+		return cargo;
 	}
 
 	public void setCargos(List<CargoEntity> cargos) {
-		this.cargos = cargos;
+		this.cargo = cargos;
 	}
 
 	public String getNome() {
