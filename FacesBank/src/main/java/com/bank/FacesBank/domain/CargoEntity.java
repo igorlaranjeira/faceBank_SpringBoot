@@ -17,7 +17,7 @@ public class CargoEntity extends AbstractEntity<Long>{
 	@JoinColumn(name = "id_departamento_fk")
 	private DepartamentoEntity departamento;
 	
-	@OneToMany(mappedBy = "CargoEntity")
+	@OneToMany(mappedBy = "cargo")
 	private List<FuncionarioEntity> funcionario;
 
 	public String getNome() {
