@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @SuppressWarnings("serial")
 @MappedSuperclass
-public abstract class abstractEntity <ID extends Serializable> implements Serializable{
+public abstract class AbstractEntity <ID extends Serializable> implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,7 +36,7 @@ public abstract class abstractEntity <ID extends Serializable> implements Serial
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		abstractEntity<?> other = (abstractEntity<?>) obj;
+		AbstractEntity<?> other = (AbstractEntity<?>) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
