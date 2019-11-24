@@ -1,11 +1,11 @@
 package com.bank.FacesBank.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.*;
+
+@SuppressWarnings("serial")
 @Entity
 @Table(name = "tb_cargo")
 public class CargoEntity extends AbstractEntity<Long>{
@@ -16,6 +16,9 @@ public class CargoEntity extends AbstractEntity<Long>{
 	@ManyToOne
 	@JoinColumn(name = "id_departamento_fk")
 	private DepartamentoEntity departamento;
+	
+	@OneToMany(mappedBy = "CargoEntity")
+	private List<FuncionarioEntity> funcionario;
 
 	public String getNome() {
 		return nome;
@@ -32,6 +35,15 @@ public class CargoEntity extends AbstractEntity<Long>{
 	public void setDepartamento(DepartamentoEntity departamento) {
 		this.departamento = departamento;
 	}
+
+	public List<FuncionarioEntity> getFuncionario() {
+		return funcionario;
+	}
+
+	public void setFuncionario(List<FuncionarioEntity> funcionario) {
+		this.funcionario = funcionario;
+	}
+	
 	
 	
 	
