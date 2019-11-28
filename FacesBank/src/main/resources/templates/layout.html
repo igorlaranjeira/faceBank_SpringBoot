@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-
 <head>
-	<title>Spring-Boot B�sico</title>
+	<title>Faces Bank</title>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -19,26 +18,27 @@
 	<!-- Custom styles for this template -->
 	<link href="/css/style.css" rel="stylesheet" />
 </head>
-
 <body>
 	<header th:replace="fragments/header :: cabecalho">
-		<div>headler</div>
+		<div>header</div>
 	</header>
-	<div class="layout-main">
+	
+	<div  class="layout-main">
 		<aside>
 			<nav th:replace="fragments/sidebar :: nav-sidebar">
 				<span>menu</span>
 			</nav>
 		</aside>
-
-		<section layout:fragments="corpo">
-			<div>Conteudo das paginas</div>
+		
+		<section layout:fragment="corpo">
+			<div>conteudo principal das páginas</div>
 		</section>
 	</div>
+	
 	<footer th:replace="fragments/footer :: rodape">
-		<div>Footer</div>
+		<div>footer</div>
 	</footer>
-
+	
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
@@ -60,5 +60,4 @@
 
 	</script>
 </body>
-
 </html>
