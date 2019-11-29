@@ -1,4 +1,4 @@
-package br.com.facesBank.service;
+package br.com.facesBank.service.impl;
 
 import java.util.List;
 
@@ -6,24 +6,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.com.facesBank.dao.UsuarioDao;
-import br.com.facesBank.domain.UsuarioEntity;
+import br.com.facesBank.dao.ContaDao;
+import br.com.facesBank.domain.ContaEntity;
+import br.com.facesBank.service.ContaService;
 
 @Service
 @Transactional
-public class UsuarioServiceImp implements UsuarioService{
+public class ContaServiceImpl implements ContaService{
 
 	@Autowired
-	private UsuarioDao dao;
+	private ContaDao dao;
 	
 	@Override
-	public void salvar(UsuarioEntity usuario) {
-		dao.save(usuario);
+	public void salvar(ContaEntity conta) {
+		dao.save(conta);
 	}
 
 	@Override
-	public void editar(UsuarioEntity usuario) {
-		dao.update(usuario);
+	public void editar(ContaEntity conta) {
+		dao.update(conta);
 	}
 
 	@Override
@@ -33,13 +34,13 @@ public class UsuarioServiceImp implements UsuarioService{
 
 	@Override
 	@Transactional(readOnly = true)
-	public UsuarioEntity buscarId(Long id) {
+	public ContaEntity buscarId(Long id) {
 		return dao.findById(id);
 	}
 
 	@Override
 	@Transactional(readOnly = true)
-	public List<UsuarioEntity> buscarTodos() {
+	public List<ContaEntity> buscarTodos() {
 		return dao.findAll();
 	}
 

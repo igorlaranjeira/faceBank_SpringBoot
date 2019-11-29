@@ -1,4 +1,4 @@
-package br.com.facesBank.service;
+package br.com.facesBank.service.impl;
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import br.com.facesBank.dao.ClienteDao;
 import br.com.facesBank.domain.ClienteEntity;
+import br.com.facesBank.service.ClienteService;
 
 @Service
 @Transactional

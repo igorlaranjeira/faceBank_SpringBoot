@@ -1,4 +1,4 @@
-package br.com.facesBank.service;
+package br.com.facesBank.service.impl;
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import br.com.facesBank.dao.DepartamentoDao;
 import br.com.facesBank.domain.DepartamentoEntity;
+import br.com.facesBank.service.DepartamentoService;
 
 @Service
 public class DepartamentoServiceImpl implements DepartamentoService {

@@ -1,10 +1,12 @@
-package br.com.facesBank.dao;
+package br.com.facesBank.dao.impl;
 
 import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import br.com.facesBank.dao.AbstractDao;
+import br.com.facesBank.dao.FuncionarioDao;
 import br.com.facesBank.domain.FuncionarioEntity;
 
 @Repository

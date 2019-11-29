@@ -4,7 +4,7 @@ import java.util.List;
 
 import br.com.facesBank.domain.MovimentacaoEntity;
 
-public interface MovimentecaoDao {
+public interface MovimentacaoDao {
 
 	void save(MovimentacaoEntity movimentacao);
 	

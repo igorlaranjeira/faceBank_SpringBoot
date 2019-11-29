@@ -1,4 +1,4 @@
-package br.com.facesBank.service;
+package br.com.facesBank.service.impl;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import br.com.facesBank.dao.FuncionarioDao;
 import br.com.facesBank.domain.FuncionarioEntity;
+import br.com.facesBank.service.FuncionarioService;
 
 @Service
 @Transactional(readOnly = true)

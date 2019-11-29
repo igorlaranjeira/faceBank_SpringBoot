@@ -1,4 +1,4 @@
-package br.com.facesBank.service;
+package br.com.facesBank.service.impl;
 
 import java.util.List;
 
@@ -6,15 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.com.facesBank.dao.MovimentecaoDao;
+import br.com.facesBank.dao.MovimentacaoDao;
 import br.com.facesBank.domain.MovimentacaoEntity;
+import br.com.facesBank.service.MovimentacaoService;
 
 @Service
 @Transactional
 public class MovimentacaoServiceImpl implements MovimentacaoService{
 
 	@Autowired
-	private MovimentecaoDao dao;
+	private MovimentacaoDao dao;
 	
 	@Override
 	public void salvar(MovimentacaoEntity movimentacao) {

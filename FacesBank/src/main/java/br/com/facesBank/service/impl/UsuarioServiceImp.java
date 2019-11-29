@@ -1,4 +1,4 @@
-package br.com.facesBank.service;
+package br.com.facesBank.service.impl;
 
 import java.util.List;
 
@@ -6,25 +6,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.com.facesBank.dao.EnderecoDao;
-import br.com.facesBank.domain.EnderecoEntity;
+import br.com.facesBank.dao.UsuarioDao;
+import br.com.facesBank.domain.UsuarioEntity;
+import br.com.facesBank.service.UsuarioService;
 
 @Service
 @Transactional
-public class EnderecoServiceImpl implements EnderecoService{
+public class UsuarioServiceImp implements UsuarioService{
 
 	@Autowired
-	private EnderecoDao dao;
-	
+	private UsuarioDao dao;
 	
 	@Override
-	public void salvar(EnderecoEntity endereco) {
-		dao.save(endereco);
+	public void salvar(UsuarioEntity usuario) {
+		dao.save(usuario);
 	}
 
 	@Override
-	public void editar(EnderecoEntity endereco) {
-		dao.update(endereco);
+	public void editar(UsuarioEntity usuario) {
+		dao.update(usuario);
 	}
 
 	@Override
@@ -34,13 +34,13 @@ public class EnderecoServiceImpl implements EnderecoService{
 
 	@Override
 	@Transactional(readOnly = true)
-	public EnderecoEntity buscarId(Long id) {
+	public UsuarioEntity buscarId(Long id) {
 		return dao.findById(id);
 	}
 
 	@Override
 	@Transactional(readOnly = true)
-	public List<EnderecoEntity> buscarTodos() {
+	public List<UsuarioEntity> buscarTodos() {
 		return dao.findAll();
 	}
 
