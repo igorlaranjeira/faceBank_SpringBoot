@@ -1,2 +1,2 @@
 # faceBank_SpringBoot
-Um projeto Grud para adicionar conhecimento em Spring Boot
+Um projeto Crud para adicionar conhecimento em Spring Boot
